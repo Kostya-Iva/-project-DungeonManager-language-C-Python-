@@ -1,0 +1,44 @@
+{% extends "Manager/main.html" %}
+
+{% block content%}
+
+<style>
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    .fade-in-first {
+        animation-delay: 1s; /* Opóźnienie dla pierwszej grupy */
+    }
+
+    .fade-in-second {
+        animation-delay: 3s; /* Opóźnienie dla drugiej grupy */
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    ul {
+        list-style-type: disc; /* Czarna kropka jako symbol */
+        margin-left: 20px; /* Odsunięcie od lewej */
+    }
+    
+</style>
+
+<div class="fade-in fade-in-first">
+    <h1>Hello [User_Name]!</h1>
+    <h1>Welcome to Dungeon Manager!</h1>
+</div>
+
+<div class="fade-in fade-in-second">
+    <ul>
+        <li>Here you can manage your characters, spells, and abilities.</li>
+        <li>Use the navigation bar to access different sections of the application.</li>
+    </ul>
+</div>
+
+{% endblock %}
